@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+}
+h3, p {
+    color: #10162F;
+}
+
+* {
+    font-family: Apercu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    font-size: 12px; /* TODO check to see min font size */
+}
+
+.sql1-container {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.sql1-column {
+    flex-grow: 1;
+}
+
+.sql1-table {
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    text-align: left;
+    border-collapse: collapse;
+}
+.sql1-table th, .sql1-table td {
+    padding: 4px;
+}
+
+.sql1-table thead tr {
+    background-color: purple; /* PLACEHOLDER */
+    color: white;
+    width: 100%;
+}
+
+td:nth-child(2) {
+    text-align: right;
+}
+
+.sql1-table td {
+    border-bottom: 1px solid black;
+}
+
+.sql1-bold, .sql1-bold * {
+    font-weight: bold;
+}
+
+.sql1-table {
+    border: 1px solid black;
+}
+
+#arrowsSvg {
+    pointer-events: none;
+    width: 100%;
+    position: absolute;
+}

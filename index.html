@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Imputation flow chart</title>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <svg id="arrowsSvg"></svg> 
+        <div class="sql1-container">
+            <div class="sql1-column">
+                <table class="sql1-table">
+                    <thead>
+                        <tr>
+                            <th>public <span class="sql1-bold">Customer</span></th><th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>CustomerId</td>
+                            <td>integer IDENTITY</td>
+                        </tr>
+                        <tr>
+                            <td>first_name</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>last_name</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>phone_number</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>address_id</td>
+                            <td>integer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">Order</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>OrderId</td>
+                            <td>integer IDENTITY</td>
+                        </tr>
+                        <tr>
+                            <td>OrderNumber</td>
+                            <td>varchar(20)</td>
+                        </tr>
+                        <tr>
+                            <td>CustomerId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>OrderDate</td>
+                            <td>timestamp</td>
+                        </tr>
+                        <tr>
+                            <td>TotalAmount</td>
+                            <td>decimal(12,2)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">OderItem</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>OrderId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr class="sql1-bold">
+                            <td>ProductId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>UnitPrice</td>
+                            <td>decimal(12,2)</td>
+                        </tr>
+                        <tr>
+                            <td>Quantity</td>
+                            <td>integer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sql1-column">
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">Address</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>address_id</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>address_1</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>address_2</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>city_id</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>postal_code</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>CustomerId</td>
+                            <td>integer</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">Product</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>ProductId</td>
+                            <td>integer IDENTITY</td>
+                        </tr>
+                        <tr>
+                            <td>ProductName</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>SupplierId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>OrderDate</td>
+                            <td>decimal(12,2)</td>
+                        </tr>
+                        <tr>
+                            <td>TotalAmount</td>
+                            <td>bit</td>
+                        </tr>
+                    </tbody>
+                </table>                
+            </div>
+            <div class="sql1-column">
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">Album</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>AlbumId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>ProductId</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>album_name</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>artist_name</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>genre</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td>number_of_songs</td>
+                            <td>integer</td>
+                        </tr>
+                        <tr>
+                            <td>release_date</td>
+                            <td>timestamp</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="sql1-table">
+                    <thead>
+                        <th>public <span class="sql1-bold">Supplier</span></th><th></th>
+                    </thead>
+                    <tbody>
+                        <tr class="sql1-bold">
+                            <td>SupplierId</td>
+                            <td>integer IDENTITY</td>
+                        </tr>
+                        <tr>
+                            <td>CompanyName</td>
+                            <td>varchar(40)</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>varchar(20)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="arrows.js"></script>
+    </body>
+</html>
