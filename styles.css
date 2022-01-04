@@ -60,3 +60,15 @@ td:nth-child(2) {
     width: 100%;
     position: absolute;
 }
+
+.sql1-inFocus {
+    background-color: yellowgreen;
+    stroke-width: 4px;
+}
+
+.sql1-arrowPath {
+    pointer-events: auto;
+    stroke-width: 2px;
+    cursor: pointer;
+    stroke: purple;
+}

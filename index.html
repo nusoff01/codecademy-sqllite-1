@@ -15,7 +15,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-CustomerId" id="sql1-row1">
                             <td>CustomerId</td>
                             <td>integer IDENTITY</td>
                         </tr>
@@ -46,7 +46,7 @@
                         <th>public <span class="sql1-bold">Order</span></th><th></th>
                     </thead>
                     <tbody>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-OrderId" id="sql1-row2">
                             <td>OrderId</td>
                             <td>integer IDENTITY</td>
                         </tr>
@@ -54,7 +54,7 @@
                             <td>OrderNumber</td>
                             <td>varchar(20)</td>
                         </tr>
-                        <tr>
+                        <tr id="sql1-row3" class="sql1-CustomerId">
                             <td>CustomerId</td>
                             <td>integer</td>
                         </tr>
@@ -73,11 +73,11 @@
                         <th>public <span class="sql1-bold">OderItem</span></th><th></th>
                     </thead>
                     <tbody>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-OrderId" id="sql1-row4">
                             <td>OrderId</td>
                             <td>integer</td>
                         </tr>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-ProductId" id="sql1-row5">
                             <td>ProductId</td>
                             <td>integer</td>
                         </tr>
@@ -118,7 +118,7 @@
                             <td>postal_code</td>
                             <td>integer</td>
                         </tr>
-                        <tr>
+                        <tr id="sql1-row6" class="sql1-CustomerId">
                             <td>CustomerId</td>
                             <td>integer</td>
                         </tr>
@@ -129,7 +129,7 @@
                         <th>public <span class="sql1-bold">Product</span></th><th></th>
                     </thead>
                     <tbody>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-ProductId" id="sql1-row7">
                             <td>ProductId</td>
                             <td>integer IDENTITY</td>
                         </tr>
@@ -137,7 +137,7 @@
                             <td>ProductName</td>
                             <td>varchar(50)</td>
                         </tr>
-                        <tr>
+                        <tr id="sql1-row8" class="sql1-SupplierId">
                             <td>SupplierId</td>
                             <td>integer</td>
                         </tr>
@@ -162,7 +162,7 @@
                             <td>AlbumId</td>
                             <td>integer</td>
                         </tr>
-                        <tr>
+                        <tr id="sql1-row9" class="sql1-ProductId">
                             <td>ProductId</td>
                             <td>integer</td>
                         </tr>
@@ -193,7 +193,7 @@
                         <th>public <span class="sql1-bold">Supplier</span></th><th></th>
                     </thead>
                     <tbody>
-                        <tr class="sql1-bold">
+                        <tr class="sql1-bold sql1-SupplierId" id="sql1-row10">
                             <td>SupplierId</td>
                             <td>integer IDENTITY</td>
                         </tr>
