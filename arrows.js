@@ -68,4 +68,4 @@ function render () {
 render();
 d3.select(window).on('resize', () => {
     render();
-})
+});
